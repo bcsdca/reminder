@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <base target="_top">
+  <link rel="stylesheet" 
+  href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css" />
+  <style>
+    .narrow {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+  <script>
+    function submitForm() {
+       google.script.run.appendRowFromFormSubmit(document.getElementById("dayForm"));
+     }
+  </script>
+</head>
+
+<body>
+  <h4>Day Selection</h4>
+  <form id="dayForm">
+    <select name="Day" id="name-selector" autofocus="autofocus" autocorrect="off" autocomplete="off">
+
+    <option value="" selected="selected">Select Day</option>
+    <option value="MONDAY">MONDAY</option>
+    <option value="TUESDAY">TUESDAY</option>
+    <option value="WEDNESDAY">WEDNESDAY</option>
+    <option value="THURSDAY">THURSDAY</option>
+    <option value="FRIDAY">FRIDAY</option>
+    <option value="SATURDAY">SATURDAY</option>
+    </select>
+
+    <input type="button" style="color:blue;" value="Submit" onclick="submitForm();">
+  </form>
+</body>
+
+</html>
